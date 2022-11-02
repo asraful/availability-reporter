@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body style="font-size: 1.5em">
+<head th:substituteby="/fragments/header :: copy"></head>
+
+<h3 class="card-header">
+    <p>
+        <span class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-th-list"></span> Monitoring Report</span>
+    </p>
+</h3>
+<div class="card-body">
+    <div th:insert="/fragments/message"></div>
+    <table class="table table-bordered text-xl-left">
+        <thead class="thead-dark">
+        <tr class="text-center">
+            <th scope="row"> #</th>
+            <th scope="row"> URL</th>
+            <th scope="row"> Response Code</th>
+            <th scope="row"> Response Message</th>
+            <th scope="row"> Response Time</th>
+            <th scope="row"> Content</th>
+            <th scope="row"> Time</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="item,iterator : ${matrixData}">
+            <td th:text="${iterator.index + 1}"></td>
+            <td>
+                <span th:text="${item.url}"> Url </span>
+            </td>
+            <td>
+                <span th:text="${item.httpResponseCode}"> Response Code </span>
+            </td>
+            <td>
+                <span th:text="${item.httpResponseMessage}"> Response Message </span>
+            </td>
+            <td>
+                <span th:text="${item.requestTime}"> Response Time </span>
+            </td>
+            <td>
+                <span th:text="${item.contentMatched}"> Content </span>
+            </td>
+            <td>
+                <span th:text="${item.aTime}"> Url </span>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</div>
+<div th:substituteby="/fragments/footer :: copy"></div>
+</body>
+</html>

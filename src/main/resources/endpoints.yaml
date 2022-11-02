@@ -1,0 +1,9 @@
+endpoints:
+  -   url: 'https://www.f-secure.com/en'
+      content: 'F-Secure'
+  -   url: 'https://github.com/asraful'
+      content: 'Asraful Forhad Chowdhury'
+  -   url: 'http://www.foobarxyz.com/'
+      content: 'foobar'
+  -   url : 'http://www.foobar.com/login'
+      content : 'login'
