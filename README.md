@@ -46,3 +46,21 @@ Check availability of websites
 * Server: Inbuilt Tomcat
 * Front End : Thymeleaf as Template Engine,BottStrap for styling
 
+## Improvement Scope :
+Improvement scope is  there, however those are out the assignment scope.
+
+## Instruction to run :
+Before running this application you should have to confirm following:
+* JDK 11 installed. <pre>java --version</pre>
+* maven installed.  <pre>mvn --version</pre>
+* Migration script (*.sql) : Not required 
+
+Then run the following command on terminal:
+* Application will start on 5001 port. (http://localhost:5001/app)
+<pre>
+    git clone https://github.com/asraful/availability-reporter.git  [change as you needed]
+    cd availability-reporter
+    mvn spring-boot:run
+</pre>
+
+
