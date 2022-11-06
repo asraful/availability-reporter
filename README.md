@@ -64,3 +64,7 @@ Then run the following command on terminal:
 </pre>
 
 
+
+##Desing Consideration :
+
+![monitor](https://user-images.githubusercontent.com/284564/200200084-816a4050-5f2d-4979-9ed3-c2f7e6f36368.png)
