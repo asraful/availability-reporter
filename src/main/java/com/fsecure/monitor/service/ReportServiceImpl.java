@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.io.FileReader;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Component
@@ -41,6 +42,9 @@ public class ReportServiceImpl implements ReportService {
         } catch (Exception e) {
             logger.error("Report error {}", e.getMessage());
         }
+
+        matrixList.stream().sorted(Comparator.comparing(Matrix::getUrl));
+
         return matrixList;
     }
 }
