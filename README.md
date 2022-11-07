@@ -68,3 +68,9 @@ Then run the following command on terminal:
 ##Desing Consideration :
 
 ![monitor](https://user-images.githubusercontent.com/284564/200200084-816a4050-5f2d-4979-9ed3-c2f7e6f36368.png)
+
+#Data collection policy consideration 
+
+In this application, its possibly required to check with data policy and other laws .
+
+https://gdpr-info.eu/
