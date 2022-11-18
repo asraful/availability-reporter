@@ -77,9 +77,6 @@ public class MonitorServiceImpl implements MonitorService {
     @Scheduled(fixedDelayString = "${monitor.call.period}")
     public void monitor() {
         WebSites webSites = MonitorUtil.getConfiguration();
-
-        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
-        executor.submit(() -> {
             try {
                 for (Endpoint endpoint : webSites.getEndpoints()) {
                     observer(endpoint);
@@ -87,7 +84,6 @@ public class MonitorServiceImpl implements MonitorService {
             } catch (Exception e) {
                 logger.error("Monitor error {}", e.getStackTrace());
             }
-        });
     }
 
 }
